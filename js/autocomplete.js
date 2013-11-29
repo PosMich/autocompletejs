@@ -764,6 +764,11 @@ var expandConfig = function() {
     cfg.showErrors = false;
   }
 
+  // default for uniqueValues is false
+  if (typeof cfg.uniqueValues !== 'boolean') {
+    cfg.uniqueValues = false;
+  }
+
   // expand lists
   for (var i in cfg.lists) {
     if (cfg.lists.hasOwnProperty(i) !== true) continue;
